@@ -1,0 +1,1 @@
+"""Backend da plataforma de experimentos fatoriais."""

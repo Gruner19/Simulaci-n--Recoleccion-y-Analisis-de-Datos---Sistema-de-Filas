@@ -30,7 +30,7 @@
 % ------------------------------------------------------------------------- capa
 \title{Desempenho de Sistemas de Filas Simulados: Proposta de Experimento Fatorial \texorpdfstring{$2^3$}{2\textasciicircum 3} com Replicações e Análise Exploratória dos Dados}
 \shorttitle{EXPERIMENTO FATORIAL EM FILAS SIMULADAS}
-\authorsnames{Gruner Antonio Sanchez Morales}
+\authorsnames{Gruner Antonio Sanchez Morales \\ Carlos Fabricio Benites Rodriguez}
 \authorsaffiliations{Departamento de Computação, Universidade Federal de Ouro Preto}
 \course{Projeto e Análise de Experimentos Computacionais --- Entrega 1}
 \professor{\ }
@@ -107,8 +107,6 @@ Os objetivos específicos são:
 \section{Hipótese Geral do Estudo}
 \label{sec:hipotese}
 % =====================================================================================
-A hipótese foi definida antes da execução do experimento fatorial e será avaliada por meio dele. Ela é uma expectativa teórica: não foi construída a partir dos dados do piloto (seção \enquote{\nameref{sec:aed}}) nem é avaliada nele.
-Ela se apoia na teoria de filas: para uma fila M/G/1, a espera média é $\Wq = \rho\,(1 + c_s^2) / \left[ 2\mu\,(1-\rho) \right]$, em que $\rho$ é a utilização do servidor, $\mu$ a taxa de serviço e $c_s$ o coeficiente de variação do tempo de serviço \parencite{jain1991}.
 
 \paragraph{Hipótese geral.}
 A espera média em fila diminui quando aumenta o número de servidores (A), aumenta quando cresce a taxa de chegada (B) e diminui quando o tempo de serviço deixa de ter variabilidade (C, nível constante).
@@ -230,7 +228,6 @@ A análise exploratória (AED) usa corridas piloto de uma única configuração:
 Ela foi escolhida antes de qualquer corrida como a mais exigente para dimensionar o experimento, pois tem a maior utilização, em que o transiente inicial é mais longo e a variância da média é maior \parencite{kelton1985,law2000}.
 Foram simuladas \RPiloto{} corridas independentes, cada uma uma execução completa (sistema vazio, \NClientes{} clientes, semente própria), com $W = $ \Aquecimento{}.
 As sementes são diferentes das do experimento, e o piloto não entra na análise fatorial.
-Esta seção caracteriza a variável de resposta e avalia a viabilidade do experimento; não compara níveis dos fatores, não estima efeitos e não avalia a hipótese geral (seção \enquote{\nameref{sec:hipotese}}), que só será avaliada com o fatorial completo.
 
 \subsection{Estatísticas descritivas}
 A Tabela~\ref{tab:medias} resume as \RPiloto{} médias por corrida.

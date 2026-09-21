@@ -5,3 +5,4 @@ scipy==1.17.1
 pandas==3.0.2
 statsmodels==0.15.0
 matplotlib==3.10.8
+openpyxl==3.1.5   # opcional: exportação Excel (analizar_resultados.py --formato xlsx)

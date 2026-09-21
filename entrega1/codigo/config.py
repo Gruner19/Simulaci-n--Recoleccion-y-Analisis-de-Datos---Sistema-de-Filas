@@ -5,6 +5,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 DADOS = RAIZ / "dados"
 FIGURAS = RAIZ / "figuras"
 TABELAS = RAIZ / "tabelas"
+SALIDAS = RAIZ / "salidas"       # exportaciones del sistema de manipulación de resultados
 
 # ---------------------------------------------------------------- experimento fatorial 2^3 r
 R = 10                    # réplicas independentes por combinação (exigência: r >= 10)

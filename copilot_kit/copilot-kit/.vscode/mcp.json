@@ -1,0 +1,30 @@
+{
+  // Servidores MCP para el agente de Copilot en VS Code (clave "servers", no "mcpServers").
+  // VS Code pide confirmación antes de ejecutar herramientas; usa solo servidores de confianza.
+  "servers": {
+    // Documentación actualizada de FastAPI, SimPy, statsmodels, SciPy, React, Plotly, SQLAlchemy...
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    // Abre el frontend en un navegador real: pruebas E2E, capturas y verificación de gráficos
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    // OPCIONAL: inspeccionar la base SQLite del experimento (verifica que el paquete siga disponible)
+    "sqlite": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["mcp-server-sqlite", "--db-path", "${workspaceFolder}/data/experimento.db"]
+    },
+    // OPCIONAL: issues y pull requests (pide iniciar sesión con GitHub la primera vez)
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    }
+  },
+  "inputs": []
+}
